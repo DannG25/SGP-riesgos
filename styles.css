@@ -21,7 +21,7 @@ body {
   font-style: normal;
   color: rgb(0, 0, 0);
   font-size: 20px;
-  width: 990px;
+  width: 80rem;
   text-align: left;
   font-weight: bold;
   margin: 6px;
@@ -61,7 +61,24 @@ body {
 
 .headline {
   text-align: start;
+  margin: 2px;
+}
+
+.material-symbols-outlined {
+  box-sizing: content-box;
+  background-color: aqua;
+  border-radius: 100px;
+  font-size: 14px;
+  width: 25px;
+  padding: 5px;
   margin: 5px;
+  margin-left: auto;
+  text-align: right;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
 }
 
 /* .material-symbols-outlined:nth-child(1) {
@@ -82,26 +99,10 @@ body {
 .material-symbols-outlined:nth-child(5) {
   background-color: #FF0534;
 
-}
-*/
-.material-symbols-outlined {
-  display: block;
-  box-sizing: content-box;
-  text-align: right;
-  background-color: #0effa6;
-  border-radius: 100px;
-  font-size: 14px;
-  width: 25px;
-  padding: 5px; 
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48
-}
+} */
 
 .data {
-padding-left: 20px; 
+padding-left: 15px; 
 font-weight: 800;
 justify-content: center;
 }
