@@ -1,127 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="public\styles.css" >
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    
+
     <title>SGP - Informe general de riesgos</title>
 </head>
-<body>
-    <div>
 
-    <header class="menu">
+<body>
+
+    <header>
         <h2>Gestión de Riesgos</h2>
-        <button class="buttons" type="button" href="#">Nuevo Riesgo</button>
-        <button class="buttons" style="background-color: aquamarine;" type="button" href="#">Plan de acción</button>   
+        <button class="buttons buttons_riesgos">Nuevo Riesgo</button>
+        <button class="buttons buttons_planes">Plan de acción</button>
     </header>
 
-    </div>
-<section>
-            <!-- Informacion general de planes de acción -->
-
-     <div class="container">
-            <div class="component">
+    <main>
+        <section class="container">
+            <div class="card card_indicadores">
                 <span nombre="Nombre" class="headline">Identificados</span>
                 <span class="material-symbols-outlined">priority_high</span>
                 <span nombre="data" class="data"> 10 </span>
             </div>
-            <div class="component">
+            <div class="card card_indicadores">
                 <span nombre="Nombre" class="headline">Materializados</span>
                 <span class="material-symbols-outlined">done</span>
                 <span nombre="data" class="data"> 23 </span>
             </div>
-            <div class="component">
+            <div class="card card_indicadores">
                 <span nombre="Nombre" class="headline">En proceso</span>
                 <span class="material-symbols-outlined">history</span>
                 <span nombre="data" class="data"> 30 </span>
             </div>
-            <div class="component">
+            <div class="card card_indicadores">
                 <span nombre="Nombre" class="headline">Cerrados</span>
                 <span class="material-symbols-outlined">lock</span>
                 <span nombre="data" class="data"> 25 </span>
             </div>
-            <div class="component">
+            <div class="card card_indicadores">
                 <span nombre="Nombre" class="headline">Sin identificar</span>
-                <span class="material-symbols-outlined">visibility_off</span>                 
+                <span class="material-symbols-outlined">visibility_off</span>
                 <span nombre="data" class="data"> 12 </span>
             </div>
+        </section>
 
-    </div>
-    </section>
-    
-            <!--Valoracion de Riesgos -->
+        <!--Valoracion de Riesgos -->
 
-    <section>
-<div class="container-2">
-    
-    <div class="component-2">
+        <section class="container">
+            <div class="card card_grafica_riesgos">
                 <ul>
-                    <li class="risk-ball"></li>
-                    <li class="risk-ball"></li>
-                    <li class="risk-ball"></li>
-                    <li class="risk-ball"></li>
-                    <li class="risk-ball"></li>
-                    <li class="risk-ball"></li>
+                    <li class="risk"><span class="risk-ball"></span> 30 Riesgos Muy alto - Impacto 90.00% </li>
+                    <li class="risk"><span class="risk-ball"></span> 15 Riesgos Medio Alto - Impacto 70.00% </li>
+                    <li class="risk"><span class="risk-ball"></span> 21 Riesgos Medio - Impacto 50.00% </li>
+                    <li class="risk"><span class="risk-ball"></span> 13 Riesgos Medio Bajo - Impacto 30.00% </li>
+                    <li class="risk"><span class="risk-ball"></span> 19 Riesgos Muy Bajo - Impacto 10.00% </li>
+                    <li class="risk"><span class="risk-ball"></span> 45 Riesgos Sin identificar - Impacto 00.00% </li>
                 </ul>
-                <ul>
-                    <li class="risk">30 Riesgos Muy alto - Impacto 90.00% </li>
-                    <li class="risk">15 Riesgos Medio Alto - Impacto 70.00% </li>
-                    <li class="risk">21 Riesgos Medio - Impacto 50.00% </li>
-                    <li class="risk">13 Riesgos Medio Bajo - Impacto 30.00% </li>
-                    <li class="risk">19 Riesgos Muy Bajo - Impacto 10.00% </li>
-                    <li class="risk">45 Riesgos Sin identificar - Impacto 00.00% </li>
-                </ul>
-</div>
-<div class="component-2">
-    <main class="main">
+            </div>
+            <div class="card card_lista_planes">
+                <div class="card-header">
+                    <span class="card-title">Planes de accion activos</span>
+                </div>
+                <div class="card-content">
+                    <table>
+                        <!--  Plan de acción  -->
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Plan de acción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>CON - 001</td>
+                                <td>Garantizar el cumplimento en los objetivos del contrato.</td>
+                            </tr>
+                            <tr>
+                                <td>CON - 002</td>
+                                <td>Actualización de modificaciones de areas a todas las instancias.</td>
+                            </tr>
+                            <tr>
+                                <td>DIS - 001</td>
+                                <td>Entrega de diseños definitivos en las fechas establecidas.</td>
+                            </tr>
+                            <tr>
+                                <td>PRP - 001</td>
+                                <td>Actualización de precios en el ERP.</td>
+                            </tr>
+                            <tr>
+                                <td>PRP - 002</td>
+                                <td>Validación de históricos presupuestos vs ejecución proyectos anteriores.</td>
+                            </tr>
+                            <tr>
+                                <td>REC - 001</td>
+                                <td>Programar capacitacion del SST.</td>
+                            </tr>
+                            <tr>
+                                <td>REC - 002</td>
+                                <td>Control de cambios en el diseño durante la planeación y ejecución del proyecto.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
-        <table>
-             <!--  Plan de acción  -->
-            <thead>
-                <tr>
-                    <th>Código</th>
-                    <th>Plan de acción</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>CON - 001</td>
-                    <td>Garantizar el cumplimento en los objetivos del contrato.</td>
-                </tr>
-                <tr>
-                    <td>CON - 002</td>
-                    <td>Actualización de modificaciones de areas a todas las instancias.</td>
-                </tr>
-                <tr>
-                    <td>DIS - 001</td>
-                    <td>Entrega de diseños definitivos en las fechas establecidas.</td>
-                </tr>
-                <tr>
-                    <td>PRP - 001</td>
-                    <td>Actualización de precios en el ERP.</td>
-                </tr>
-                <tr>
-                    <td>PRP - 002</td>
-                    <td>Validación de históricos presupuestos vs ejecución proyectos anteriores.</td>
-                </tr>
-                <tr>
-                    <td>REC - 001</td>
-                    <td>Programar capacitacion del SST.</td>
-                </tr>
-                <tr>
-                    <td>REC - 002</td>
-                    <td>Control de cambios en el diseño durante la planeación y ejecución del proyecto.</td>
-                </tr>
-            </tbody>
-        </table>
+            </div>
+        </section>
     </main>
-</div>
-
-
-    </section>
 </body>
+
 </html>
