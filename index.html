@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="public/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-
+    <script>src="main.js"</script>
     <title>SGP - Informe general de riesgos</title>
 </head>
 
@@ -16,8 +16,8 @@
 
     <header>
         <h2>Gestión de Riesgos</h2>
-        <button class="buttons buttons_riesgos">Nuevo Riesgo</button>
-        <button class="buttons buttons_planes">Plan de acción</button>
+        <button class="buttons buttons_risk">Nuevo Riesgo</button>
+        <button class="buttons buttons_plans">Plan de acción</button>
     </header>
 
     <main>
@@ -54,17 +54,19 @@
         <section class="container">
             <div class="card card_grafica_riesgos">
                 <ul>
-                    <li class="risk"><span class="risk-ball"></span> 30 Riesgos Muy alto - Impacto 90.00% </li>
-                    <li class="risk"><span class="risk-ball"></span> 15 Riesgos Medio Alto - Impacto 70.00% </li>
-                    <li class="risk"><span class="risk-ball"></span> 21 Riesgos Medio - Impacto 50.00% </li>
-                    <li class="risk"><span class="risk-ball"></span> 13 Riesgos Medio Bajo - Impacto 30.00% </li>
-                    <li class="risk"><span class="risk-ball"></span> 19 Riesgos Muy Bajo - Impacto 10.00% </li>
-                    <li class="risk"><span class="risk-ball"></span> 45 Riesgos Sin identificar - Impacto 00.00% </li>
+                    <li class="risk"><span class="risk-ball"></span> Riesgos Muy altos 30 </li>
+                    <li class="risk"><span class="risk-ball"></span> Riesgos Medio Alto 15 </li>
+                    <li class="risk"><span class="risk-ball"></span> Riesgos Medio 21 </li>
+                    <li class="risk"><span class="risk-ball"></span> Riesgos Medio Bajo 13 </li>
+                    <li class="risk"><span class="risk-ball"></span> Riesgos Muy Bajo 19 </li>
+                    <li class="risk"><span class="risk-ball"></span> Riesgos Sin identificar 45 </li>
                 </ul>
+                <canvas id="myChart" height="50" width="50"></canvas>
             </div>
+
             <div class="card card_lista_planes">
                 <div class="card-header">
-                    <span class="card-title">Planes de accion activos</span>
+                    <span class="card-title">Planes de acción activos</span>
                 </div>
                 <div class="card-content">
                     <table>
@@ -111,6 +113,6 @@
             </div>
         </section>
     </main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.min.js" integrity="sha512-7U4rRB8aGAHGVad3u2jiC7GA5/1YhQcQjxKeaVms/bT66i3LVBMRcBI9KwABNWnxOSwulkuSXxZLGuyfvo7V1A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
-
 </html>
