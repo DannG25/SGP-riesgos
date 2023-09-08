@@ -1,19 +1,27 @@
 
+
 const ctx = document.getElementById(myChart);
 
 const data = {
     labels: [
-      'Red',
-      'Blue',
-      'Yellow'
+      'Muy alto',
+      'Medio alto',
+      'Medio',
+      'Medio Bajo',
+      'Medio Bajo',
+      'Muy bajo',
+      'Sin identificar',
     ],
     datasets: [{
       label: 'My First Dataset',
       data: [300, 50, 100],
       backgroundColor: [
-        'rgb(255, 99, 132)',
-        'rgb(54, 162, 235)',
-        'rgb(255, 205, 86)'
+        'rgba(229, 1, 39, 0.5)',
+        'rgba(255, 154, 31, 0.5)',
+        'rgba(255, 251, 90, 0.5)',
+        'rgba(47, 231, 65, 0.26)',
+        'rgba(47, 231, 65, 0.7)',
+        'rgba(144, 130, 122, 0.5)',
       ],
       hoverOffset: 4
     }]
