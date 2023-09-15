@@ -105,19 +105,19 @@ h2 {
 }
 
 .card_indicadores:nth-child(1) > .material-symbols-outlined {
-  background-color: #FFEB54;
+  background-color: #faef9b;
 }
 .card_indicadores:nth-child(2) > .material-symbols-outlined {  
-  background-color: #2FE741;
+  background-color: #92f79c;
 }
 .card_indicadores:nth-child(3) > .material-symbols-outlined {
-  background-color: #01C4E7;
+  background-color: #86edff;
 }
 .card_indicadores:nth-child(4) > .material-symbols-outlined {
-    background-color: #2EF8A0;
+    background-color: #55ffb5;
 }
 .card_indicadores:nth-child(5) > .material-symbols-outlined {
-  background-color: #FF0534;
+  background-color:#bec8df;
 }
 .data {
   padding-left: 15px;
