@@ -36,7 +36,7 @@ const data = {
             'rgba(47, 231, 65, 0.7)',
             'rgba(144, 130, 122, 0.5)',
         ],
-        hoverOffset: 5
+        hoverOffset: 15
     }]
 };
 
