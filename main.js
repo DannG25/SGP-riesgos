@@ -18,6 +18,7 @@ const data = {
             'Muy Bajo',
             'Sin identificar',
         ],
+        label:'Riesgos',
         data: [30, 15, 21, 13, 19, 45],
         borderColor: [
         'rgba(229, 1, 39, 0.5)',
@@ -36,18 +37,10 @@ const data = {
             'rgba(47, 231, 65, 0.7)',
             'rgba(144, 130, 122, 0.5)',
         ],
-        hoverOffset: 15
+      hoverOffset: 15
     }]
-};
-
-new Chart(ctx, {
+}; 
+    const chart = new Chart(ctx, {
     type: 'doughnut',
     data: data,
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
-})
+});
