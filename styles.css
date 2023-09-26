@@ -131,46 +131,13 @@ h2 {
 .card_grafica_riesgos,
 .card_lista_planes,
 .card_matriz_riesgos {
-  width: 630px;
+  width: 620px;
   height: 220px;
-}
-
-.risk-ball {
-  display: block;
-  width: 12px;
-  height: 12px;
-  margin-right: 10px;
-  border-radius: 50%;
-}
-
-.risk:nth-child(1) > .risk-ball {
-  background-color: #E50127;
-}
-.risk:nth-child(2) > .risk-ball {
-  background-color: #FF9A1F;
-}
-.risk:nth-child(3) > .risk-ball {
-  background-color: #FFFB5A;
-}
-.risk:nth-child(4) > .risk-ball{
-  background-color: #78f184;
-}
-.risk:nth-child(5) > .risk-ball {
-  background-color: #24e437;
-}
-.risk:nth-child(6) > .risk-ball {
-  background-color: #c9c5c5cb;
-}
-
-.risk {
-  display: flex;
-  flex-direction: row;
-  font-size: 14px;
-  margin-left: 0%;
+  padding:5px;
 }
 
 canvas {
- max-width: 10%;
+ max-width: 90%;
 }
 
 ul {
