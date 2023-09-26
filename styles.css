@@ -131,9 +131,9 @@ h2 {
 .card_grafica_riesgos,
 .card_lista_planes,
 .card_matriz_riesgos {
-  width: 620px;
+  width: 610px;
   height: 220px;
-  padding:5px;
+  padding: 5px;
 }
 
 canvas {
