@@ -22,7 +22,7 @@ const data = {
             'rgba(47, 231, 65, 0.7)',
             'rgba(144, 130, 122, 0.5)',
         ],
-        // cutout: [35],    
+        cutout: [85],    
         borderAlign: ['inner'],
         backgroundColor: [
             'rgba(229, 1, 39, 0.5)',
