@@ -12,11 +12,11 @@ body {
 
 header {
   display: flex;
+  height: 50px;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   margin-top: auto;
   border-bottom: 1PX solid silver;
-  height: 50px;
 }
 
 h2 {
@@ -50,9 +50,9 @@ h2 {
 
 .container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   box-sizing: content-box;
-  margin: 15px;
+  margin: 5px;
   flex-wrap: wrap;
 }
 
@@ -83,8 +83,8 @@ h2 {
 }
 
 .card_indicadores {
-  width: 245px;
-  height: 90px;
+  width: 345px;
+  height: 100px;
 }
 
 .headline {
@@ -131,13 +131,13 @@ h2 {
 .card_grafica_riesgos,
 .card_lista_planes,
 .card_matriz_riesgos {
-  width: 610px;
-  height: 220px;
-  padding: 5px;
+  width: 897px;
+  height: 320px;
+  padding: 5px; 
 }
 
 canvas {
- max-width: 90%;
+ max-width: 80%;
 }
 
 ul {
