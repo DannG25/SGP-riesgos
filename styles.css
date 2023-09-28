@@ -72,7 +72,7 @@ h2 {
 }
 
 .card .card-header {
-  padding: 6px;
+  padding: 5px;
   border-bottom: 1px solid silver;
   margin-bottom: 2px;
 }
@@ -83,18 +83,19 @@ h2 {
 }
 
 .card .card-content {
-  padding: 6px;
+  padding: 5px;
   overflow-y: auto;
 }
 
 .card_indicadores {
-  width: 345px;
+  width: 360px;
   height: 100px;
 }
 
 .headline {
   text-align: start;
   margin: 2px;
+  font-size: 15px;
 }
 
 .material-symbols-outlined {
@@ -127,11 +128,12 @@ h2 {
 .data {
   padding-left: 15px;
   font-weight: 800;
+  font-size: 15px;
   color: black;
   justify-content: center;
 }
 
-/* Segundo container */
+/* Contenedor Matriz de riesgos */
 
 .card_grafica_riesgos,
 .card_lista_planes,
@@ -141,6 +143,7 @@ h2 {
   padding: 5px; 
 }
 
+/* Estilos de grafica */
 canvas {
  max-width: 80%;
 }
@@ -151,7 +154,7 @@ ul {
   padding-left: 5px;
   margin: 10px;
 }
-
+/* Plan de acción */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -162,4 +165,3 @@ td {
   padding: 5px;
   border: solid 1px #eee;
 }
-/* Espacio de desarrollo para grafico JS*/
