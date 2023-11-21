@@ -1,144 +1,144 @@
 /* Configuracion Inicial */
 
 * {
-    padding: 0;
-    margin: 0;
-    font-size: 12px;
-    color: #77767c;
-    font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  color: #77767c;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
-    background-color: #f1eee8;
+  background-color: #f1eee8;
 }
 
 header {
-    display: flex;
-    height: 50px;
-    align-items: center;
-    justify-content: flex-end;
-    margin-top: auto;
-    border-bottom: 1PX solid silver;
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: auto;
+  border-bottom: 1PX solid silver;
 }
 
 h2 {
-    font-style: normal;
-    color: rgb(0, 0, 0);
-    font-size: 20px;
-    width: 80rem;
-    text-align: left;
-    margin: 6px;
+  font-style: normal;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  width: 80rem;
+  text-align: left;
+  margin: 6px;
 }
 
 
 /* Botones */
 
 .buttons {
-    font-weight: bold;
-    font-size: 14px;
-    color: rgb(0, 0, 0);
-    width: 142px;
-    height: 32px;
-    margin: 5px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+  width: 142px;
+  height: 32px;
+  margin: 5px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
 }
 
 .buttons_plans {
-    background-color: #a8ff7c;
+  background-color: #a8ff7c;
 }
 
 .buttons_risk {
-    background-color: #91fcea;
+  background-color: #91fcea;
 }
 
 
 /* Indicadores de riesgos */
 
 .container {
-    display: flex;
-    justify-content: space-between;
-    box-sizing: content-box;
-    margin: 5px;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: content-box;
+  margin: 5px;
+  flex-wrap: wrap;
 }
 
 .card {
-    margin-top: 5px;
-    display: flex;
-    flex-direction: column;
-    font-weight: bold;
-    border: 1px solid #ECECEC;
-    background: #FFFFFF;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  border: 1px solid #ECECEC;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .card .card-header {
-    padding: 5px;
-    border-bottom: 1px solid silver;
-    margin-bottom: 2px;
+  padding: 5px;
+  border-bottom: 1px solid silver;
+  margin-bottom: 2px;
 }
 
 .card .card-header .card-title {
-    font-weight: 500;
-    color: #2FE741;
+  font-weight: 500;
+  color: #2FE741;
 }
 
 .card .card-content {
-    padding: 5px;
-    overflow-y: auto;
+  padding: 5px;
+  overflow-y: auto;
 }
 
 .card_indicadores {
-    width: 360px;
-    height: 100px;
+  width: 360px;
+  height: 100px;
 }
 
 .headline {
-    text-align: start;
-    margin: 2px;
-    font-size: 15px;
+  text-align: start;
+  margin: 2px;
+  font-size: 15px;
 }
 
 .material-symbols-outlined {
-    color: rgb(59, 57, 57);
-    font-size: 14px;
-    width: 25px;
-    padding: 5px;
-    margin: 5px;
-    margin-left: auto;
-    text-align: right;
-    border-radius: 10rem;
-    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48
+  color: rgb(59, 57, 57);
+  font-size: 14px;
+  width: 25px;
+  padding: 9px;
+  margin: 5px;
+  margin-left: auto;
+  text-align: right;
+  border-radius: 10rem;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48
 }
 
 .card_indicadores:nth-child(1)>.material-symbols-outlined {
-    background-color: #faef9b;
+  background-color: #faef9b;
 }
 
 .card_indicadores:nth-child(2)>.material-symbols-outlined {
-    background-color: #92f79c;
+  background-color: #92f79c;
 }
 
 .card_indicadores:nth-child(3)>.material-symbols-outlined {
-    background-color: #86edff;
+  background-color: #86edff;
 }
 
 .card_indicadores:nth-child(4)>.material-symbols-outlined {
-    background-color: #55ffb5;
+  background-color: #55ffb5;
 }
 
 .card_indicadores:nth-child(5)>.material-symbols-outlined {
-    background-color: #bec8df;
+  background-color: #bec8df;
 }
 
 .data {
-    padding-left: 15px;
-    font-weight: 800;
-    font-size: 15px;
-    color: black;
-    justify-content: center;
+  padding-left: 15px;
+  font-weight: 800;
+  font-size: 15px;
+  color: black;
+  justify-content: center;
 }
 
 
@@ -147,70 +147,72 @@ h2 {
 .card_grafica_riesgos,
 .card_lista_planes,
 .card_matriz_riesgos {
-    width: 897px;
-    height: 320px;
-    padding: 5px;
+  width: 910px;
+  height: 375px;
+  padding: 5px;
 }
 
 
 /* Estilos de grafica */
 
 canvas {
-    max-width: 80%;
+  max-width: 80%;
 }
 
 ul {
-    list-style-type: none;
-    list-style-position: inside;
-    padding-left: 5px;
-    margin: 10px;
+  list-style-type: none;
+  list-style-position: inside;
+  padding-left: 5px;
+  margin: 10px;
 }
 
 
 /* Plan de acción */
 
 table {
-    width: 100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
 }
 
 th,
 td {
-    padding: 5px;
-    border: solid 1px #eee;
+  padding: 5px;
+  border: solid 1px #eee;
 }
 
 
 /***************************matriz de riesgos*****************************/
 
 .card_matriz_riesgos {
-    display: flex;
+  display: flex;
 }
 
 .display_flex {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .div_row {
-    display: flex;
-    height: 50px;
+  display: flex;
+  height: 50px;
 }
 
 .div_celda {
-    flex: 25%;
-    border: 0.3px solid #e2e2e2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  flex: 25%;
+  border: 0.3px solid #e2e2e2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .contenedor_matrices {
-    display: flex;
+  display: flex;
 }
 
 #matriz_Amenazas,
 #matriz_Oportunidades {
-    flex: 50%;
+  flex: 50%;
 }
+
+/* Grafica de riesgos */
