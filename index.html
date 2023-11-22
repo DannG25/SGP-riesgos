@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="public/styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -61,8 +61,7 @@
                     <li class="risk"><span class="risk-ball"></span> Riesgos Muy Bajo - Impacto 10.00% </li>
                     <li class="risk"><span class="risk-ball"></span> Riesgos Sin identificar - Impacto 00.00% </li>
                 </ul> -->
-                <canvas id="myChart"></canvas>
-                <script src="main.js"></script>
+                <canvas id="graficaValoraciones"></canvas>
 
             </div>
 
@@ -72,7 +71,7 @@
                 </div>
                 <div class="card-content">
                     <table>
-            <!-- Tabla plan de acción  -->
+                        <!-- Tabla plan de acción  -->
                         <thead>
                             <tr>
                                 <th>Código</th>
@@ -109,51 +108,53 @@
                                 <td>Control de cambios en el diseño durante la planeación y ejecución del proyecto.</td>
                             </tr>
                         </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="card card_matriz_riesgos">
+                <div class="display_flex titulo_matriz">
+                    <h4>Amenazas</h4>
+                    <h4>Oportunidades</h4>
+                </div>
+                <div class="contenedor_matrices">
+                    <div id="matriz_Amenazas"></div>
+                    <div id="matriz_Oportunidades"></div>
+                </div>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td id="tdAmenazas">
+                                <th>Muy bajo 0.10</th>
+                                <th>Bajo 0.20</th>
+                                <th>Medio 0.50</th>
+                                <th>Alto 0.70</th>
+                                <th>Muy alto 0.90</th>
+                            </td>
+
+                            <td id="tdOportunidades">
+                                <th>Muy alto 0.90</th>
+                                <th>Alto 0.70</th>
+                                <th>Medio 0.70</th>
+                                <th>Bajo 0.20</th>
+                                <th>Muy bajo 0.10</th>
+                            </td>
+                        </tr>
+
+                    </tbody>
                 </table>
             </div>
-        </div>
-        <div class="card card_matriz_riesgos">
-            <div class="display_flex titulo_matriz">
-                <h4>Amenazas</h4>
-                <h4>Oportunidades</h4>
+
+            <div class="card card_matriz_riesgos">
+
+                <canvas id="graficaAmenazaOportunidades"></canvas>
+
+
             </div>
-            <div class="contenedor_matrices">
-                <div id="matriz_Amenazas"></div>
-                <div id="matriz_Oportunidades"></div>
-            </div>
-            <table>
-                <tbody>
-                    <tr>
-                        <td id="tdAmenazas">
-                            <th>Muy bajo 0.10</th>
-                            <th>Bajo 0.20</th>
-                            <th>Medio 0.50</th>
-                            <th>Alto 0.70</th>
-                            <th>Muy alto 0.90</th>
-                        </td>
-
-                        <td id="tdOportunidades"> 
-                            <th>Muy alto 0.90</th>
-                            <th>Alto 0.70</th>
-                            <th>Medio 0.70</th>
-                            <th>Bajo 0.20</th>
-                            <th>Muy bajo 0.10</th>
-                        </td>
-                    </tr>
-                   
-                </tbody>
-            </table>
-        </div>
-
-        <div class="card card_matriz_riesgos">
-
-        <canvas id="doughnutRiesgo"></canvas>
-        <script src="graphics1.js"></script>
-
-        </div>
-    </section>
-</main>
-<script src="matriz-riesgos2.js"></script>
+        </section>
+    </main>
+    <script src="matriz-riesgos2.js"></script>
+    <script src="graficas.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
