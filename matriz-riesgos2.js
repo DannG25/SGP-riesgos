@@ -1,7 +1,20 @@
 const probabilidades = [0.90, 0.70, 0.50, 0.30, 0.10];
 const impactos = [0.05, 0.10, 0.20, 0.40, 0.80];
 const impactos_oportunidades = [0.80, 0.40, 0.20, 0.10, 0.05];
-
+const descripcionProbabilidad = [  
+    {descripcion:"Muy bajo", valor: 0.10},
+    {descripcion:"Bajo", valor: 0.20},
+    {descripcion:"Medio", valor: 0.50},
+    {descripcion:"Alto", valor: 0.70},
+    {descripcion:"Muy alto", valor: 0.90},
+    ]
+    const descripcionImpacto = [  
+        {descripcion:"Muy bajo", valor: 0.10},
+        {descripcion:"Bajo", valor: 0.20},
+        {descripcion:"Medio", valor: 0.50},
+        {descripcion:"Alto", valor: 0.70},
+        {descripcion:"Muy alto", valor: 0.90},
+    ]
 
 const coloresValoracion = [{ valor: 0.05, colorFondo: "#c8ff54", colorTexto: "#000000" },
     { valor: 0.09, colorFondo: "#c8ff54", colorTexto: "#000000" },
@@ -49,10 +62,11 @@ pintarValoracion = (valor, contenedorValoracion) => {
 
 }
 
-const dibujarMatriz = (nombreMatriz, datosProbrabilidades, datosImpactos) => {
-    datosProbrabilidades.forEach(item => {
+const dibujarMatriz = (nombreMatriz, datosProbabilidades, datosImpactos) => {
+    datosProbabilidades.forEach(item => {
         const prob = document.createElement('div');
         prob.classList.add('div_row')
+
         datosImpactos.forEach(col => {
             pintarValoracion(parseFloat(item * col).toFixed(2), prob)
         })
@@ -61,6 +75,36 @@ const dibujarMatriz = (nombreMatriz, datosProbrabilidades, datosImpactos) => {
 }
 
 
+obtenerDatosDescripcion = () => {
+let fila = document.createElement('div');
+let celdaDescripcion = document.createElement('div');
 
+if( celdaDescripcion.innerHTML = descripcionProbabilidad.valor) {
+    fila.appendChild(celdaDescripcion);
+}
+else{
+    let celda = document.createElement('div');
+    celda.innerHTML = descripcionProbabilidad.valor * descripcionProbabilidad.valor;
+}
+    fila.append(celda);
+}
+
+
+
+pintarDescripcion = () => {
+let fila = document.createElement('div');
+let celdaDescripcion = document.createElement('div');
+
+if( celdaDescripcion.innerHTML = p.valor) {
+    fila.appendChild(celdaDescripcion);
+}
+else{
+    let celda = document.createElement('div');
+    celda.innerHTML = descripcionImpacto.valor * descripcionImpacto.valor;
+}
+ fila.append(celda);
+}
+    
 dibujarMatriz('matriz_Amenazas', probabilidades, impactos);
 dibujarMatriz('matriz_Oportunidades', probabilidades, impactos_oportunidades);
+obtenerDatosDescripcion('descripcion', descripcionProbabilidad);
