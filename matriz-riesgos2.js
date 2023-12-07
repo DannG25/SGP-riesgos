@@ -1,21 +1,22 @@
-const probabilidades = [0.90, 0.70, 0.50, 0.30, 0.10];
-const impactos = [0.05, 0.10, 0.20, 0.40, 0.80];
-const impactos_oportunidades = [0.80, 0.40, 0.20, 0.10, 0.05];
-const descripcionProbabilidad = [  
-    {descripcion:"Muy bajo", valor: 0.10},
-    {descripcion:"Bajo", valor: 0.20},
-    {descripcion:"Medio", valor: 0.50},
-    {descripcion:"Alto", valor: 0.70},
-    {descripcion:"Muy alto", valor: 0.90},
-    ]
-    const descripcionImpacto = [  
-        {descripcion:"Muy bajo", valor: 0.10},
-        {descripcion:"Bajo", valor: 0.20},
-        {descripcion:"Medio", valor: 0.50},
-        {descripcion:"Alto", valor: 0.70},
-        {descripcion:"Muy alto", valor: 0.90},
-    ]
-
+// const probabilidades = [0.90, 0.70, 0.50, 0.30, 0.10];
+// const impactos = [0.05, 0.10, 0.20, 0.40, 0.80];
+//const impactos_oportunidades = [0.80, 0.40, 0.20, 0.10, 0.05];
+const probabilidades = [
+    { descripcion: "Muy alto", valor: 0.90 },
+    { descripcion: "Alto", valor: 0.70 },
+    { descripcion: "Medio", valor: 0.50 },
+    { descripcion: "Bajo", valor: 0.30 },
+    { descripcion: "Muy bajo", valor: 0.10 }
+]
+const impactos = [
+    { descripcion: "Muy bajo", valor: 0.05 },
+    { descripcion: "Bajo", valor: 0.10 },
+    { descripcion: "Medio", valor: 0.20 },
+    { descripcion: "Alto", valor: 0.40 },
+    { descripcion: "Muy alto", valor: 0.80 },
+]
+impactos.unshift({ descripcion: "Muy bajo", valor: "0" });
+//const impactos_oportunidades = impactos.sort(function(i, x) { return x.valor - i.valor });
 const coloresValoracion = [{ valor: 0.05, colorFondo: "#c8ff54", colorTexto: "#000000" },
     { valor: 0.09, colorFondo: "#c8ff54", colorTexto: "#000000" },
     { valor: 0.07, colorFondo: "#c8ff54", colorTexto: "#000000" },
@@ -40,9 +41,9 @@ const coloresValoracion = [{ valor: 0.05, colorFondo: "#c8ff54", colorTexto: "#0
 ]
 
 const obtenerColorCelda = (valor) => {
-    const colorCelda = coloresValoracion.filter(item => {
-        if (item.valor == valor)
-            return item;
+    const colorCelda = coloresValoracion.filter(color => {
+        if (color.valor == valor)
+            return color;
     });
     return colorCelda.length == 0 ? "#fff" : colorCelda[0];
 }
@@ -63,48 +64,41 @@ pintarValoracion = (valor, contenedorValoracion) => {
 }
 
 const dibujarMatriz = (nombreMatriz, datosProbabilidades, datosImpactos) => {
-    datosProbabilidades.forEach(item => {
-        const prob = document.createElement('div');
-        prob.classList.add('div_row')
+    datosProbabilidades.forEach(probabilidad => {
 
-        datosImpactos.forEach(col => {
-            pintarValoracion(parseFloat(item * col).toFixed(2), prob)
+        const contenedor = document.createElement('div');
+        contenedor.classList.add('div_row')
+
+        datosImpactos.forEach(impacto => {
+            if (impacto.valor != 0)
+                pintarValoracion(parseFloat(impacto.valor * probabilidad.valor).toFixed(2), contenedor)
         })
-        document.getElementById(nombreMatriz).appendChild(prob);
+
+        const celdaDescripcion = document.createElement('div');
+        celdaDescripcion.innerHTML = probabilidad.descripcion;
+        celdaDescripcion.classList.add('div_celda')
+        if (nombreMatriz == 'matriz_Amenazas')
+            contenedor.prepend(celdaDescripcion)
+        else
+            contenedor.append(celdaDescripcion);
+
+
+        document.getElementById(nombreMatriz).appendChild(contenedor);
+
     });
+
+    const contenedorNombresImpactos = document.createElement('div');
+    contenedorNombresImpactos.classList.add('div_row')
+
+    datosImpactos.forEach(impacto => {
+        const divImpacto = document.createElement('div');
+        divImpacto.classList.add("div_celda");
+        divImpacto.innerHTML = (impacto.valor == 0) ? '' : impacto.descripcion;
+        contenedorNombresImpactos.append(divImpacto);
+    })
+    document.getElementById(nombreMatriz).appendChild(contenedorNombresImpactos);
 }
 
-
-obtenerDatosDescripcion = () => {
-let fila = document.createElement('div');
-let celdaDescripcion = document.createElement('div');
-
-if( celdaDescripcion.innerHTML = descripcionProbabilidad.valor) {
-    fila.appendChild(celdaDescripcion);
-}
-else{
-    let celda = document.createElement('div');
-    celda.innerHTML = descripcionProbabilidad.valor * descripcionProbabilidad.valor;
-}
-    fila.append(celda);
-}
-
-
-
-pintarDescripcion = () => {
-let fila = document.createElement('div');
-let celdaDescripcion = document.createElement('div');
-
-if( celdaDescripcion.innerHTML = p.valor) {
-    fila.appendChild(celdaDescripcion);
-}
-else{
-    let celda = document.createElement('div');
-    celda.innerHTML = descripcionImpacto.valor * descripcionImpacto.valor;
-}
- fila.append(celda);
-}
-    
 dibujarMatriz('matriz_Amenazas', probabilidades, impactos);
-dibujarMatriz('matriz_Oportunidades', probabilidades, impactos_oportunidades);
-obtenerDatosDescripcion('descripcion', descripcionProbabilidad);
+dibujarMatriz('matriz_Oportunidades', probabilidades, impactos.sort(function(i, x) { return x.valor - i.valor }));
+//obtenerDatosDescripcion('descripcion', descripcionProbabilidad);
